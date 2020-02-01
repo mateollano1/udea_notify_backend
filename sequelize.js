@@ -8,8 +8,8 @@ const configurationModel = require('./models/configurations')
 const eventsModel = require('./models/events')
 
 
-const sequelize = new Sequelize('udea_notify', 'root', 'root', {
-  host: 'localhost',
+const sequelize = new Sequelize('1zI2DaBwEU', '1zI2DaBwEU', 'Af65icJSgx', {
+  host: 'remotemysql.com',
   dialect: 'mysql',
   pool: {
     max: 10,
@@ -36,7 +36,7 @@ Event.hasMany(Notification)
 TypeNotification.hasMany(Notification)
 Admin.hasMany(Notification)
 
-sequelize.sync({ force: true })
+sequelize.sync({ force: false })
   .then(() => {
     console.log(`Database & tables created!`)
   });
